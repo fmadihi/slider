@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes slidershow {
+    0% {
+        background-image: url('./image/spring.jpg');
+    }
+
+    33% {
+        background-image: url('./image/summer.jpg');
+    }
+
+    66% {
+        background-image: url('./image/fall.jpg');
+    }
+
+    100% {
+        background-image: url('./image/winter.jpeg');
+    }
+}
+
+@keyframes loadingshow {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+section.slider {
+    width: 100%;
+    height: 100vh;
+    background-color: darkgray;
+    background-image: url('./image/spring.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.slidershow {
+    animation: slidershow 20s linear infinite;
+}
+
+section.slider>section.loading {
+    width: 0;
+    height: 10px;
+    background-color: blueviolet;
+}
+
+.loadingshow {
+    animation: loadingshow 5s linear infinite;
+}
